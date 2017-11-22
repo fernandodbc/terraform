@@ -14,3 +14,11 @@ resource "aws_subnet" "main" {
     Name = "Fernando"
   }
 }
+
+resource "aws_internet_gateway" "gw" {
+  vpc_id = "${aws_vpc.main.id}"
+
+  tags {
+    Name = "Fernando"
+  }
+}
